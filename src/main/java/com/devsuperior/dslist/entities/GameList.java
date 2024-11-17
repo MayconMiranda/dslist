@@ -41,11 +41,11 @@ public class GameList {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GameList gameList = (GameList) o;
-        return Objects.equals(id, gameList.id);
+        return Objects.equals(id, gameList.id) && Objects.equals(name, gameList.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(id, name);
     }
 }
